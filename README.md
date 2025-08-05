@@ -11,21 +11,17 @@ A TypeScript utility library inspired by Rust's fearsome type safety, zero-cost 
 ## 🧪 Example
 
 ```ts
-import { option, result } from "@bytebury/baba-yaga";
+import type { Option } from "@bytebury/baba-yaga";
+import { Some } from "@bytebury/baba-yaga";
 
-// Option<T>
-const username = option(getUserName());
-
-if (username.isSome()) {
-	console.log("Hello, " + username.unwrap());
-} else {
-	console.warn("No username found");
-}
-
-// Result<T, E>
-const res = result(() => mightThrow());
-
-res.match({
-	ok: (value) => console.log("Success:", value),
-	err: (error) => console.error("Caught error:", error),
+const username = getUsername(); // Option<string>
+const result = username.match({
+  Some: (username: string) => `Hello, ${username}`,
+  None: () => `Hello, Guest`,
 });
+console.log(result); // this is safe
+
+// you can also unwrap it directly, though that might throw an exception
+console.log(username.unwrap()); // this is unsafe
+console.log(username.unwrapOr('unknown user')); // this is safe
+```
