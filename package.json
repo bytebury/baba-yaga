@@ -1,8 +1,14 @@
 {
 	"name": "@bytebury/baba-yaga",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "🧹 The boogeyman of bugs. A TypeScript utility library inspired by Rust's fearsome type safety, zero-cost abstractions, and no-nonsense attitude. Baba Yaga doesn't just scare bugs away -- it hunts them down with precision.",
 	"main": "dist/index.js",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		}
+	},
 	"scripts": {
 		"test": "vitest",
 		"build": "rm -rf ./dist && tsc"
