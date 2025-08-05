@@ -1,34 +1,35 @@
 {
-  "name": "baba-yaga",
-  "version": "1.0.0",
-  "description": "🧹 The boogeyman of bugs. A TypeScript utility library inspired by Rust's fearsome type safety, zero-cost abstractions, and no-nonsense attitude. Baba Yaga doesn't just scare bugs away -- it hunts them down with precision.",
-  "main": "dist/index.js",
-  "scripts": {
-    "test": "vitest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bytebury/baba-yaga.git"
-  },
-  "keywords": [
-    "rust",
-    "typescript",
-    "safe-ts",
-    "safe-typescript",
-    "baba-yaga",
-    "babayaga"
-  ],
-  "author": "Marcello <bytebury@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bytebury/baba-yaga/issues"
-  },
-  "homepage": "https://github.com/bytebury/baba-yaga#readme",
-  "devDependencies": {
-    "@biomejs/biome": "^2.1.3",
-    "@vitest/coverage-v8": "^3.2.4",
-    "typedoc": "^0.28.9",
-    "typescript": "^5.9.2",
-    "vitest": "^3.2.4"
-  }
+	"name": "@bytebury/baba-yaga",
+	"version": "0.0.1",
+	"description": "🧹 The boogeyman of bugs. A TypeScript utility library inspired by Rust's fearsome type safety, zero-cost abstractions, and no-nonsense attitude. Baba Yaga doesn't just scare bugs away -- it hunts them down with precision.",
+	"main": "dist/index.js",
+	"scripts": {
+		"test": "vitest",
+		"build": "rm -rf ./dist && tsc"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/bytebury/baba-yaga.git"
+	},
+	"keywords": [
+		"rust",
+		"typescript",
+		"safe-ts",
+		"safe-typescript",
+		"baba-yaga",
+		"babayaga"
+	],
+	"author": "Marcello <bytebury@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/bytebury/baba-yaga/issues"
+	},
+	"homepage": "https://github.com/bytebury/baba-yaga#readme",
+	"devDependencies": {
+		"@biomejs/biome": "^2.1.3",
+		"@vitest/coverage-v8": "^3.2.4",
+		"typedoc": "^0.28.9",
+		"typescript": "^5.9.2",
+		"vitest": "^3.2.4"
+	}
 }
